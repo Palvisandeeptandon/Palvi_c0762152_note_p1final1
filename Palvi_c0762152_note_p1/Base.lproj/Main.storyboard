@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qDA-Pa-jdR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="TYY-Ym-hNQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qDA-Pa-jdR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Xbu-tq-OCB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5hk-sZ-IZ4" kind="relationship" relationship="rootViewController" id="AE1-VH-XKP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96v-Sn-5Ti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="103.79464285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CD2-TV-wwN">
+            <objects>
+                <viewController id="5hk-sZ-IZ4" customClass="ViewController" customModule="Palvi_c0762152_note_p1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="66M-9J-Ade">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JbS-1b-OGk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="ntF-qg-o6c">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ntF-qg-o6c" id="ASb-aX-VXZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5hk-sZ-IZ4" id="yh3-dG-fRh"/>
+                                    <outlet property="delegate" destination="5hk-sZ-IZ4" id="X0B-eA-PuI"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obO-mX-11b">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0Fg-6s-vTK"/>
+                                    <barButtonItem title="New Folder" id="hoF-qM-HCq">
+                                        <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="createNewFolder:" destination="5hk-sZ-IZ4" id="mtU-qB-FnX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JbS-1b-OGk" firstAttribute="top" secondItem="65o-0N-hK6" secondAttribute="top" id="2X4-hw-hVV"/>
+                            <constraint firstItem="obO-mX-11b" firstAttribute="top" secondItem="JbS-1b-OGk" secondAttribute="bottom" id="6Iv-FM-Z82"/>
+                            <constraint firstItem="obO-mX-11b" firstAttribute="leading" secondItem="65o-0N-hK6" secondAttribute="leading" id="8rk-KM-aSY"/>
+                            <constraint firstItem="65o-0N-hK6" firstAttribute="trailing" secondItem="JbS-1b-OGk" secondAttribute="trailing" id="CfU-6T-XmB"/>
+                            <constraint firstItem="JbS-1b-OGk" firstAttribute="leading" secondItem="65o-0N-hK6" secondAttribute="leading" id="R7C-kn-6lH"/>
+                            <constraint firstItem="obO-mX-11b" firstAttribute="bottom" secondItem="65o-0N-hK6" secondAttribute="bottom" id="VFj-wl-kAv"/>
+                            <constraint firstAttribute="trailing" secondItem="obO-mX-11b" secondAttribute="trailing" id="jZJ-yl-rTf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="65o-0N-hK6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="T1C-qA-3HY">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="c4a-QP-PRn">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="startEditing:" destination="5hk-sZ-IZ4" id="KiT-gp-OzF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="JbS-1b-OGk" id="UfA-FW-TBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2W-aB-BxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891.304347826087" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>
